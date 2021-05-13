@@ -3,4 +3,5 @@
     <string name="camera">Camera</string>
     <string name="camera2">Camera2</string>
     <string name="camerax">CameraX</string>
+    <string name="camera_switch">Switch</string>
 </resources>

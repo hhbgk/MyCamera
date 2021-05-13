@@ -8,6 +8,8 @@ import android.os.Message;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.Nullable;
 
@@ -30,7 +32,13 @@ public class CameraActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
         faceDetectView = findViewById(R.id.face_detect_view);
-
+        Button btnSwitch = findViewById(R.id.btn_switch);
+        btnSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (camera != null) camera.switchCamera();
+            }
+        });
         SurfaceView surfaceView = findViewById(R.id.surfaceView);
 
         surfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {

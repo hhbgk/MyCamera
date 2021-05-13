@@ -125,7 +125,16 @@ public class Camera1Imp extends BaseCamera {
 
     @Override
     public void switchCamera() {
-
+        if (camera != null) {
+            stopPreview();
+            close();
+            if (currentCameraId == faceBackCameraId) {
+                open(faceFrontCameraId);
+            } else {
+                open(faceBackCameraId);
+            }
+            startPreview();
+        }
     }
 
     @Override
