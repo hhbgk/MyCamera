@@ -14,6 +14,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.hhbgk.mycamera.camera.CameraActivity;
+import com.hhbgk.mycamera.camerax.CameraXActivity;
 
 public class MainActivity extends Activity implements View.OnClickListener {
     private String tag = getClass().getSimpleName();
@@ -49,7 +50,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             startActivity(new Intent(this, CameraActivity.class));
         } else if (v.getId() == R.id.camera2) {
         } else if (v.getId() == R.id.camerax) {
-
+            startActivity(new Intent(this, CameraXActivity.class));
         }
     }
 
